@@ -83,6 +83,14 @@ jobs:
 
 
     steps:
+    
+      - name: Azure Login
+      
+        uses: azure/login@v1
+        
+        with:
+          
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Download artifact from build job
 
@@ -91,14 +99,8 @@ jobs:
         with:
 
           name: node-app
-          
-      - name: Azure Login
-      
-        uses: azure/login@v1
-        
-        with:
-          
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+
 
       - name: 'Deploy to Azure Web App'
 
@@ -112,6 +114,6 @@ jobs:
 
           slot-name: 'production'
 
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_8f484c9514994ce7924d062fddbb7e00 }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_20ab530b0a5040d494c9cdf93085db8d }}
 
           package: .
