@@ -5,10 +5,8 @@
   "author": "Nuzhat Minhaz",
   "private": true,
   "scripts": {
-    "build": "nuxt generate"
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "build": "nuxt generate"
   },
   "devDependencies": {
     "nuxt": "3.0.0-rc.6"
